@@ -1,4 +1,4 @@
 # TicTacToe
-An interactive Tic Tac Toe game in which you can play against an AI
+An interactive Tic Tac Toe game in which you can play against an AI using C++ and React
 
 Inspired by Professor Mohammed Alam's Python Tic Tac Toe
