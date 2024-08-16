@@ -23,6 +23,10 @@ class eval{
         }
 };
 
+
+//
+// helper function that switches the current letter
+//
 char helper(char letter){
     if (letter == 'O'){
         return 'X';
@@ -157,34 +161,8 @@ void human_first(){
 }
 
 int main() {
-    cout << R"(
-     Modes of play available:
-
-    hh: Human vs. human
-    ha: Human vs. AI
-    ah: AI vs. Hooman - AI makes first move
-    aa: AI vs. AI)" << endl;
-
-    bool valid_move = false;
-    string mode;
-
-    while (!valid_move) {
-        cout << "\nEnter preferred mode of play (e.g., aa): ";
-        cin >> mode;
-
-        if (mode == "ha") {
-            valid_move = true;
-            if (mode == "ha") {
-                human_first();}
-            /*} else if (mode == "ah") {
-                play_game_ai_moves_first();
-            } else {
-                play_game_ai_vs_ai();
-            }*/
-        } else {
-            std::cout << "\nInvalid option entered. Try again." << std::endl;
-        }
-    }
+    
+    human_first();
 
     return 0;
 }
