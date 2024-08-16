@@ -15,16 +15,16 @@ using namespace std;
 
 
 class TicTacToe {
-private:
-    std::vector<char> Board;
-    bool Winner;
-
 public:
+    std::vector<char> Board;
+    char Winner;
+
+
 //
 // Constructor
 //
 TicTacToe()
-    : Board(9, ' '), Winner(false)
+    : Board(9, ' '), Winner(' ')
     {
     }
 
@@ -46,7 +46,7 @@ void print_board(){
 //
 vector<int> available_moves(){
     vector<int> moves;
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 9; i++){
         if (this->Board[i] == ' '){
             moves.push_back(i);
         }
@@ -60,7 +60,7 @@ vector<int> available_moves(){
 // returns true if there is an empty square left on the board, false if not
 //
 bool empty_squares_available(){
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 9; i++){
         if (this->Board[i] == ' '){
             return true;
         }
@@ -75,7 +75,7 @@ bool empty_squares_available(){
 //
 int num_empty_squares(){
     int result = 0;
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 9; i++){
         if (this->Board[i] == ' '){
             result += 1;
         }
@@ -107,9 +107,10 @@ bool make_move(int square, char letter){
 bool check_winner(int square, char letter){
     int row_int = square / 3;
     bool row = true;
-    for (int i = row_int; i < row_int + 3; i++){
+    for (int i = row_int * 3; i < row_int * 3 + 3; i++){
         if (this->Board[i] != letter){
             row = false;
+            break;
         }
     }
     if (row == true){
@@ -118,9 +119,10 @@ bool check_winner(int square, char letter){
 
     int col_int = square % 3;
     bool col = true;
-    for (int i = col_int; i < 10; i + 3){
+    for (int i = col_int; i < 9; i += 3){
         if (this->Board[i] != letter){
             col = false;
+            break;
         }
     }
     if (col == true){
@@ -130,14 +132,16 @@ bool check_winner(int square, char letter){
     if (square % 2 == 0){
         bool left = true;
         bool right = true;
-        for (int i = 0; i < 9; i + 4){
+        for (int i = 0; i < 9; i += 4){
             if (this->Board[i] != letter){
                 left = false;
+                break;
             }
         }
-        for (int j = 2; j < 7; j + 2){
+        for (int j = 2; j < 7; j += 2){
             if (this->Board[j] != letter){
                 right = false;
+                break;
             }
         }
         if (left == true || right == true){
