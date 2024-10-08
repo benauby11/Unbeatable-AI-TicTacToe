@@ -17,13 +17,14 @@ To run the game on your local machine, follow these steps:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone <repository-url> ''' 
+   git clone <repository-url> 
 
 2. Open the project in your preferred IDE. This project was designed to run on any local IDE that supports C++.
 
 3. Compile and run the game. If using a command line, this can be done with:
-    '''bash g++ -o TicTacToe main.cpp
-    ./TicTacToe'''
+    ```bash
+    g++ -o TicTacToe main.cpp
+    ./TicTacToe
 
 4. Play the game by following the instructions in the console. 
 
