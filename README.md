@@ -1,4 +1,4 @@
-# TicTacToe
+# Unbeatable AI TicTacToe
 
 ## Overview
 Unbeatable-AI-TicTacToe is an interactive console-based Tic Tac Toe game, where you can test your skills against an AI opponent, which I claim to be impossible to beat. This project is built using C++ and implements the Minimax algorithm with alpha-beta pruning to provide an optimized and competitive game experience.
