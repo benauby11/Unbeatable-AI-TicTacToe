@@ -1,7 +1,7 @@
 # TicTacToe
 
 ## Overview
-TicTacToe is an interactive console-based Tic Tac Toe game, where you can test your skills against a challenging AI opponent. This project is built using C++ and implements the Minimax algorithm with alpha-beta pruning to provide an optimized and competitive game experience.
+Unbeatable-AI-TicTacToe is an interactive console-based Tic Tac Toe game, where you can test your skills against an AI opponent, which I claim to be impossible to beat. This project is built using C++ and implements the Minimax algorithm with alpha-beta pruning to provide an optimized and competitive game experience.
 
 ## Inspiration
 This project was inspired by Professor Mohammed Alam's Python-based Tic Tac Toe implementation, which laid the groundwork for creating a more sophisticated AI opponent in C++.
@@ -30,6 +30,6 @@ To run the game on your local machine, follow these steps:
 
 
 ## How It Works
-The AI uses the Minimax algorithm, a backtracking algortihm commonly used in decision-making and game theory. Minimax works by using DFS to explore all possible moves, choosing the move that maximizes the chances of winning (or minimizes the chances of losing, epending on whose turn it is).
+The AI uses the Minimax algorithm, a backtracking algorithm commonly used in decision-making and game theory. Minimax works by using DFS to explore all possible moves, choosing the move that maximizes the chances of winning (or minimizes the chances of losing, depending on whose turn it is).
 
 To improve the efficiency of the algorithm, alpha-beta pruning is applied. This reduces the number of moves that the algorithm needs to check by eliminating branches that are guaranteed to be worse than previously explored options.
